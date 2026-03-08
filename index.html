@@ -5,16 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>STREAK BOT</title>
 
-<link href="https://fonts.googleapis.com" rel="stylesheet">
+<link rel="preload" href="font.ttf" as="font" type="font/ttf" crossorigin>
 
 <style>
+
+@font-face {
+    font-family: "StreakFont";
+    src: url("font.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 :root{
 --bg-color:#121212;
 --shadow-light:#1d1d1f;
 --shadow-dark:#050505;
 --accent:#ff7e00;
---apple-font:-apple-system,BlinkMacSystemFont,"Inter",sans-serif;
+--main-font:"StreakFont", -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 body{
@@ -24,12 +32,13 @@ justify-content:center;
 align-items:center;
 height:100vh;
 margin:0;
-font-family:var(--apple-font);
--webkit-font-smoothing:antialiased;
+font-family:var(--main-font);
 overflow:hidden;
-}
 
-/* Glow */
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+text-rendering:optimizeLegibility;
+}
 
 body::after{
 content:'';
@@ -40,8 +49,6 @@ height:450px;
 background:radial-gradient(50% 50% at 50% 100%, rgba(255,126,0,0.08) 0%, transparent 100%);
 z-index:-1;
 }
-
-/* TOP NAV */
 
 .top-nav{
 position:absolute;
@@ -54,7 +61,6 @@ padding:8px;
 border-radius:30px;
 background:rgba(20,20,20,0.6);
 backdrop-filter:blur(10px);
-box-shadow:0 10px 30px rgba(0,0,0,0.5);
 }
 
 .nav-item{
@@ -74,8 +80,6 @@ color:white;
 background:rgba(255,126,0,0.15);
 color:var(--accent);
 }
-
-/* MAIN */
 
 .container{
 width:280px;
@@ -102,41 +106,30 @@ align-items:center;
 
 .logo-box img{
 width:70px;
-height:70px;
 }
 
 h1{
 color:white;
 font-size:26px;
-font-weight:700;
-letter-spacing:-0.8px;
-margin:0 0 45px 0;
+margin-bottom:45px;
 }
 
 .btn-setup{
 display:inline-block;
 padding:16px 55px;
 font-size:15px;
-font-weight:600;
 color:white;
 text-decoration:none;
 border-radius:30px;
 background:var(--bg-color);
 box-shadow:8px 8px 16px var(--shadow-dark),
 -6px -6px 16px var(--shadow-light);
-transition:all 0.3s ease;
-border:1px solid rgba(255,255,255,0.03);
+transition:0.3s;
 }
 
 .btn-setup:hover{
 color:var(--accent);
 transform:translateY(-2px);
-}
-
-.btn-setup:active{
-transform:scale(0.96);
-box-shadow:inset 5px 5px 10px var(--shadow-dark),
-inset -5px -5px 10px var(--shadow-light);
 }
 
 </style>
