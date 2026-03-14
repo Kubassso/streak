@@ -1,125 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>STREAK BOT | Setup Guide</title>
-
-<link rel="preload" href="font.ttf" as="font" type="font/ttf" crossorigin>
+<title>Setup Guide</title>
 
 <style>
 
-@font-face {
-    font-family: "StreakFont";
-    src: url("font.ttf") format("truetype");
-    font-display: swap;
-}
-
-:root{
-    --accent:#ff7e00;
-    --main-font:"StreakFont", sans-serif;
-}
-
 body{
-    margin:0;
-    font-family:var(--main-font);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    background: url('backstreakground2.png') no-repeat center center fixed;
-    background-size: cover;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-}
-
-body::after{
-    content:'';
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background: rgba(18,18,18,0.5);
-    z-index:-1;
+margin:0;
+font-family:sans-serif;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:url('backstreakground2.png') center/cover no-repeat fixed;
 }
 
 .top-nav{
-    position:absolute;
-    top:25px;
-    left:50%;
-    transform:translateX(-50%);
-    display:flex;
-    gap:10px;
-    padding:8px;
-    border-radius:30px;
-    background:rgba(20,20,20,0.6);
-    backdrop-filter:blur(10px);
+position:absolute;
+top:25px;
+left:50%;
+transform:translateX(-50%);
+display:flex;
+gap:10px;
+padding:8px;
+border-radius:30px;
+background:rgba(20,20,20,0.6);
 }
 
 .nav-item{
-    color:#9a9a9a;
-    text-decoration:none;
-    font-size:14px;
-    padding:8px 18px;
-    border-radius:20px;
+color:#aaa;
+text-decoration:none;
+padding:8px 18px;
 }
 
 .nav-item.active{
-    background:rgba(255,126,0,0.15);
-    color:var(--accent);
+color:orange;
 }
 
 .container{
-    width:350px;
-    padding:50px 40px;
-    border-radius:48px;
-    background: rgba(18,18,18,0.5);
-    backdrop-filter: blur(15px);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-    text-align:center;
-}
-
-.logo-box{
-    width:110px;
-    height:110px;
-    margin:0 auto 35px;
-    border-radius:24px;
-    background: rgba(18,18,18,0.3);
-    box-shadow: inset 7px 7px 14px rgba(0,0,0,0.3),
-                inset -7px -7px 14px rgba(255,255,255,0.05);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.logo-box img{
-    width:70px;
-}
-
-h1{
-    text-align:center;
-    margin-bottom:40px;
-    color: var(--accent);
-    font-weight: normal;
-}
-
-.step-item{
-    margin-bottom:20px;
-    color:#d1d1d6;
-}
-
-.step-number{
-    color:var(--accent);
-    font-weight:bold;
-    margin-right:8px;
-}
-
-.orange-text {
-    color: var(--accent);
-    font-weight: normal;
-    text-decoration: none;
+background:rgba(18,18,18,0.5);
+padding:40px;
+border-radius:40px;
+color:white;
 }
 
 </style>
@@ -128,23 +51,17 @@ h1{
 <body>
 
 <div class="top-nav">
-    <a href="index.html" class="nav-item">Setup</a>
-    <a href="index2.html" class="nav-item active">Setup Guide</a>
+<a href="index.html" class="nav-item">Setup</a>
+<a href="index2.html" class="nav-item active">Setup Guide</a>
+<a href="index3.html" class="nav-item">Announcement Notes</a>
 </div>
 
 <div class="container">
 
-    <h1>Setup Guide</h1>
+<h1>Setup Guide</h1>
 
-    <div class="step-item">
-        <span class="step-number">1.</span>
-        Go to the server channel and type <a class="orange-text">/timezone</a>
-    </div>
-
-    <div class="step-item">
-        <span class="step-number">2.</span>
-        You can now use the bot.
-    </div>
+<p>1. Type /timezone</p>
+<p>2. Start using the bot</p>
 
 </div>
 
