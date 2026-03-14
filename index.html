@@ -5,126 +5,78 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>STREAK BOT</title>
 
-<link rel="preload" href="font.ttf" as="font" type="font/ttf" crossorigin>
-
 <style>
 
-@font-face {
-    font-family: "StreakFont";
-    src: url("font.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
 :root{
-    --accent:#ff7e00;
-    --main-font:"StreakFont", -apple-system, BlinkMacSystemFont, sans-serif;
+--accent:#ff7e00;
 }
 
 body{
-    margin:0;
-    font-family:var(--main-font);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    /* Tło z obrazka */
-    background: url('backstreakground.png') no-repeat center center fixed;
-    background-size: cover;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
+margin:0;
+font-family:sans-serif;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:url('backstreakground.png') center/cover no-repeat fixed;
 }
 
 body::after{
-    content:'';
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background: rgba(18,18,18,0.5); /* ciemna warstwa dla kontrastu */
-    z-index:-1;
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(18,18,18,0.5);
+z-index:-1;
 }
 
 .top-nav{
-    position:absolute;
-    top:25px;
-    left:50%;
-    transform:translateX(-50%);
-    display:flex;
-    gap:10px;
-    padding:8px;
-    border-radius:30px;
-    background:rgba(20,20,20,0.6);
-    backdrop-filter:blur(10px);
+position:absolute;
+top:25px;
+left:50%;
+transform:translateX(-50%);
+display:flex;
+gap:10px;
+padding:8px;
+border-radius:30px;
+background:rgba(20,20,20,0.6);
+backdrop-filter:blur(10px);
 }
 
 .nav-item{
-    color:#9a9a9a;
-    text-decoration:none;
-    font-size:14px;
-    padding:8px 18px;
-    border-radius:20px;
+color:#9a9a9a;
+text-decoration:none;
+padding:8px 18px;
+border-radius:20px;
 }
 
 .nav-item.active{
-    background:rgba(255,126,0,0.15);
-    color:var(--accent);
+background:rgba(255,126,0,0.15);
+color:var(--accent);
 }
 
 .container{
-    width:280px;
-    padding:50px;
-    border-radius:48px;
-    /* Efekt szkła */
-    background: rgba(18,18,18,0.5);
-    backdrop-filter: blur(15px);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-    text-align:center;
-}
-
-.logo-box{
-    width:110px;
-    height:110px;
-    margin:0 auto 35px;
-    border-radius:24px;
-    background: rgba(18,18,18,0.3);
-    box-shadow: inset 7px 7px 14px rgba(0,0,0,0.3),
-                inset -7px -7px 14px rgba(255,255,255,0.05);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.logo-box img{
-    width:70px;
+width:280px;
+padding:50px;
+border-radius:48px;
+background:rgba(18,18,18,0.5);
+backdrop-filter:blur(15px);
+text-align:center;
 }
 
 h1{
-    color: var(--accent);
-    font-size:26px;
-    margin-bottom:45px;
-    font-weight: normal;
+color:var(--accent);
 }
 
-.btn-setup{
-    display:inline-block;
-    padding:16px 55px;
-    font-size:15px;
-    color:white;
-    text-decoration:none;
-    border-radius:30px;
-    background: rgba(18,18,18,0.5);
-    box-shadow:8px 8px 16px rgba(0,0,0,0.3),
-               -6px -6px 16px rgba(255,255,255,0.05);
-    transition:0.3s;
-}
-
-.btn-setup:hover{
-    color:var(--accent);
-    transform:translateY(-2px);
+.btn{
+display:inline-block;
+padding:16px 55px;
+border-radius:30px;
+background:rgba(18,18,18,0.5);
+color:white;
+text-decoration:none;
 }
 
 </style>
@@ -133,19 +85,17 @@ h1{
 <body>
 
 <div class="top-nav">
-    <a href="index.html" class="nav-item active">Setup</a>
-    <a href="index2.html" class="nav-item">Setup Guide</a>
+<a href="index.html" class="nav-item active">Setup</a>
+<a href="index2.html" class="nav-item">Setup Guide</a>
+<a href="index3.html" class="nav-item">Announcement Notes</a>
 </div>
 
 <div class="container">
+<h1>Streak Bot</h1>
 
-    <div class="logo-box">
-        <img src="streak.png" alt="Logo">
-    </div>
-
-    <h1>Streak Bot</h1>
-
-    <a href="https://discord.com/oauth2/authorize?client_id=1479511009898139688&permissions=8&integration_type=0&scope=bot" class="btn-setup">Setup</a>
+<a class="btn" href="https://discord.com/oauth2/authorize?client_id=1479511009898139688&permissions=8&integration_type=0&scope=bot">
+Setup
+</a>
 
 </div>
 
